@@ -1,0 +1,10 @@
+{
+  "id": "fix-012",
+  "source": "fixture://forum-sim",
+  "captured_at": "2026-09-18T15:22:00Z",
+  "title": "Bank combo list follow-up (SIMULATED)",
+  "body": "Follow-up from dump_broker@example.invalid claiming IFSC + CVV 'fullz' (fake). Same email as fix-002 so cluster CL-* should form. @sim_dumpdesk",
+  "category_hint": "credentials",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

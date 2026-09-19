@@ -1,0 +1,2 @@
+# AWS Lambda runtimes already include boto3.
+# Keep this file empty-of-heavy-deps so sam build stays fast.

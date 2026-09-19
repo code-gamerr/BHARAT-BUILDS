@@ -1,0 +1,10 @@
+{
+  "id": "fix-007",
+  "source": "fixture://loanapp-sim",
+  "captured_at": "2026-09-18T13:10:00Z",
+  "title": "Loan-app KYC resale thread (SIMULATED)",
+  "body": "Same desk as KYC packs: +91-90000-00001 offering loan app KYC leftovers. Mirror listing for cluster demo. seller@example.invalid also listed.",
+  "category_hint": "docs",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

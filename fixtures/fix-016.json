@@ -1,0 +1,10 @@
+{
+  "id": "fix-016",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T17:02:00Z",
+  "title": "Recharge / gift-card arbitrage (SIMULATED)",
+  "body": "Buy discounted Google Play / Amazon IN codes, pay NEFT to mule. +91-90000-00016 recharge@example.invalid https://sim.casepacket.invalid/cards",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

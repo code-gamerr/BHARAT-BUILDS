@@ -1,0 +1,10 @@
+{
+  "id": "fix-011",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T15:00:00Z",
+  "title": "Fake PAN + GST kit mention (SIMULATED)",
+  "body": "Bundle of PAN card + GST certificate templates. Contact gstdesk@example.invalid / +91-96666-00011. Docs category, simulated.",
+  "category_hint": "docs",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}
