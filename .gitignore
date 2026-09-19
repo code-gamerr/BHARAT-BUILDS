@@ -1,21 +1,4 @@
 .aws-sam/
-<<<<<<< HEAD
-.aws-sam-build/
-dist/
-node_modules/
-web/dist/
-web/node_modules/
-__pycache__/
-*.pyc
-.env
-web/.env
-data/
-.venv/
-venv/
-samconfig.toml
-.DS_Store
-*.zip
-=======
 .env
 .env.local
 .local/
@@ -32,4 +15,3 @@ web/.env
 *.log
 .DS_Store
 Thumbs.db
->>>>>>> Tanish-local
