@@ -1,0 +1,14 @@
+{
+  "id": "fx-007",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Fake invoice PDF mill (SIMULATED)",
+  "body": "Bulk fake invoices. Email invoices@fakebiz.example.invalid",
+  "category_hint": "docs",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

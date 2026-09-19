@@ -1,0 +1,14 @@
+{
+  "id": "fx-012",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Investment FOMO channel (SIMULATED)",
+  "body": "Telegram @crypto_fomo_demo pushes scam coins.",
+  "category_hint": "scam",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

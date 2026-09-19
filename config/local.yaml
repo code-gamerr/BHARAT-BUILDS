@@ -1,0 +1,15 @@
+# Local / shared runtime settings (override with env vars).
+# No case content lives here — cases come from fixtures/ or ingest API.
+
+server:
+  host: "127.0.0.1"
+  port: 8000
+
+paths:
+  fixtures_dir: fixtures
+  data_dir: data
+  packets_dir: data/packets
+  risk_rules: config/risk_rules.yaml
+
+# Set via env in production:
+# CASEPACKET_API_KEY, CASEPACKET_FIXTURES_DIR, CASEPACKET_DATA_DIR

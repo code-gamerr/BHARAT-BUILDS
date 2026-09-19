@@ -1,0 +1,14 @@
+{
+  "id": "fx-003",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Mule account recruitment (SIMULATED)",
+  "body": "Need mule accounts for ransomware cashout. WhatsApp +91-9888777666. Wallet 0x1111222233334444555566667777888899990000",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

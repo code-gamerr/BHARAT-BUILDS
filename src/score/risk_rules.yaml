@@ -1,0 +1,23 @@
+# Risk scoring weights — loaded at runtime (not hardcoded in app logic).
+# Override path with CASEPACKET_RISK_RULES env var.
+
+entity_points_per_item: 8
+entity_points_cap: 40
+
+keywords:
+  kyc: 12
+  mule: 15
+  otp: 10
+  phishing: 14
+  ransomware: 18
+  credential: 12
+  dump: 10
+  carding: 16
+  scam: 8
+  fraud: 10
+  telegram: 4
+  upi: 6
+
+category_rules:
+  high_min: 70
+  mid_min: 40

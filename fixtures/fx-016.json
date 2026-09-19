@@ -1,0 +1,14 @@
+{
+  "id": "fx-016",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Shared mule email (SIMULATED)",
+  "body": "Same seller@example.invalid appears again with dump offer \u2014 cluster test.",
+  "category_hint": "credentials",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "fx-008",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Crypto mixer intro (SIMULATED)",
+  "body": "Mixer wallet bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh for demo only.",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

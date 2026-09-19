@@ -1,0 +1,14 @@
+{
+  "id": "fx-013",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "ATM skimmer parts chat (SIMULATED)",
+  "body": "Discussion of skimmers \u2014 FICTIONAL. Handle @skimmer_demo",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

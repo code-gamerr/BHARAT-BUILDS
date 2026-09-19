@@ -1,0 +1,14 @@
+{
+  "id": "fx-009",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Job scam call center (SIMULATED)",
+  "body": "Work from home KYC job. Apply hr@jobscam.example.invalid +91-9876501234",
+  "category_hint": "scam",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

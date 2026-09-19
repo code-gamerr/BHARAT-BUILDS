@@ -1,0 +1,14 @@
+{
+  "id": "fx-004",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Credential dump tease (SIMULATED)",
+  "body": "Dump of corporate emails for sale. Sample victim@corp.example.invalid. Not real data.",
+  "category_hint": "credentials",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

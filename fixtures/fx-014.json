@@ -1,0 +1,14 @@
+{
+  "id": "fx-014",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Deepfake KYC video (SIMULATED)",
+  "body": "Selling deepfake KYC videos. Email deepfake@example.invalid",
+  "category_hint": "docs",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

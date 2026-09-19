@@ -1,0 +1,14 @@
+{
+  "id": "fx-001",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Fake KYC pack listing (SIMULATED)",
+  "body": "Seller offers fake KYC docs. Contact seller@example.invalid or +91-9000000001. UPI fraud theme. simulated only.",
+  "category_hint": "docs",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

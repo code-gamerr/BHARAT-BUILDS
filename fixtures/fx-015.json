@@ -1,0 +1,14 @@
+{
+  "id": "fx-015",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Refund fraud playbook (SIMULATED)",
+  "body": "Retail refund fraud tips. Phone +91-9000111222",
+  "category_hint": "scam",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "fx-019",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Bank OTP bot (SIMULATED)",
+  "body": "Bot that asks for OTP. https://otp-capture.example.invalid",
+  "category_hint": "credentials",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

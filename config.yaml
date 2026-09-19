@@ -1,0 +1,100 @@
+# CasePacket — agent / build config
+# Full throttle: no project hard boundaries on building or resource gathering.
+
+project: CasePacket
+version: 2
+mode: full_throttle
+hard_boundaries: none
+
+# ---------------------------------------------------------------------------
+# Build posture
+# ---------------------------------------------------------------------------
+build:
+  ask_before_edit: false
+  ask_before_new_files: false
+  ask_before_deps: false
+  ask_before_aws_scaffold: false
+  parallelize: true
+  max_files_per_turn: unlimited
+  create_missing_dirs: true
+  update_docs_with_code: true
+  run_tests_when_possible: true
+  deploy_when_credentials_present: true
+  no_feature_caps: true
+  no_scope_caps: true
+
+# ---------------------------------------------------------------------------
+# Resource gathering
+# ---------------------------------------------------------------------------
+resources:
+  unrestricted: true
+  use_agent_reach: true
+  use_github: true
+  use_jina_reader: true
+  use_aws_docs: true
+  use_trendshift: true
+  use_builder_center: true
+  use_youtube_transcripts: true
+  fetch_vendor_whitepapers: true
+  clone_reference_repos: true
+  download_any_needed_datasets: true
+  cache_under: .agent-reach/
+  temp_under: "%TEMP%"
+
+# ---------------------------------------------------------------------------
+# AWS (Ship It — AWS at the core)
+# ---------------------------------------------------------------------------
+aws:
+  region: ap-south-1
+  prefer_sam: true
+  amplify_frontend: true
+  bedrock: true
+  bedrock_rft_grpo: true
+  grpo_group_size_min: 13
+  all_services_allowed: true
+  no_artificial_service_caps: true
+  spend_guardrail_usd: null
+  billing_alarm: optional
+
+# ---------------------------------------------------------------------------
+# Scope — no hard boundaries
+# ---------------------------------------------------------------------------
+scope:
+  product: le_darkweb_intel_casepacket
+  hard_boundaries: []
+  allow_everything_needed_to_ship: true
+  allow_full_stack_implementation: true
+  allow_architecture_changes: true
+  allow_new_packages: true
+  allow_refactor: true
+  allow_doc_rewrites: true
+  allow_cursor_rules_update: true
+  allow_crawl_connectors: true
+  allow_ml_training: true
+  allow_live_integrations: true
+
+# ---------------------------------------------------------------------------
+# References
+# ---------------------------------------------------------------------------
+docs:
+  - docs/CasePacket-PRD.md
+  - docs/plan.md
+  - docs/frontend.md
+  - docs/backend.md
+  - docs/ml.md
+  - docs/resources.md
+  - Executive Summary.pdf
+  - README.md
+
+cursor_rule: .cursor/rules/casepacket.mdc
+
+# ---------------------------------------------------------------------------
+# Agent
+# ---------------------------------------------------------------------------
+agent:
+  motto: build_fast_research_hard_ship_url_no_self_caps
+  when_blocked_on_tooling: install_or_document_and_continue
+  when_sam_missing: guide_install_then_scaffold_anyway
+  prefer_working_mvp_over_perfect_grpo: true
+  after_each_phase: update_plan_checkboxes
+  ignore_artificial_project_limits: true

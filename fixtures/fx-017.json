@@ -1,0 +1,14 @@
+{
+  "id": "fx-017",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "GST fake bill ring (SIMULATED)",
+  "body": "Fake GST invoices. Contact gstfake@example.invalid",
+  "category_hint": "docs",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

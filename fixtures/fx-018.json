@@ -1,0 +1,14 @@
+{
+  "id": "fx-018",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Romance scam kit (SIMULATED)",
+  "body": "Scripts for romance scam. @romance_demo_handle",
+  "category_hint": "scam",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "fx-006",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "SIM swap discussion (SIMULATED)",
+  "body": "Talk about SIM swap for OTP. Phone +91-9123456780. Educational fixture.",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}

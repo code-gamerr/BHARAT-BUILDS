@@ -1,0 +1,24 @@
+---
+description: CasePacket LE dark-web intel — AWS Ship It constraints from Executive Summary + specs
+alwaysApply: true
+---
+
+# CasePacket (Bharat Builds / First Commit Ship It)
+
+## Product
+LE **analyst case packet** from **simulated** dark-web-style fixtures — not a chatbot, not a live Tor crawler.
+
+## Pipeline (Executive Summary / SecNinjaz-style)
+Collection (fixtures/S3) → Normalize → Entity correlate + risk score → **Court-friendly CasePacket** (hash + chain-of-custody) on AWS.
+
+## Hard rules
+- **AWS at the core** (`ap-south-1`): SAM, Amplify, Lambda, API GW, DynamoDB, S3, Step Functions, Bedrock optional/RFT GRPO.
+- **No live Tor/onion crawl** or exploit tooling in code or demos.
+- Every fixture and UI: `simulated: true` / **SIMULATED DATA** banner.
+- Packet must compile **without Bedrock** (`enrichment: degraded` OK).
+- Prefer machine-readable findings JSON (Trendshift: security-audit-skill pattern) over screenshots-only.
+- Do not claim “CID Track” as a real public system (Executive Summary: undocumented).
+- Cyph3r = hackathon PoC inspiration only — we ship a **fieldable demo console**, not a crawler claim.
+
+## Docs to follow
+`docs/CasePacket-PRD.md`, `docs/plan.md`, `docs/frontend.md`, `docs/backend.md`, `docs/ml.md`, `docs/resources.md`

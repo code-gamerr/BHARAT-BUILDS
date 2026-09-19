@@ -1,0 +1,14 @@
+{
+  "id": "fx-002",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "OTP phishing kit chatter (SIMULATED)",
+  "body": "Telegram @scamdemo_bot sells OTP phishing pages. Email ops@phish.example.invalid. Carding mentioned.",
+  "category_hint": "credentials",
+  "tlp": "TLP:AMBER",
+  "simulated": true,
+  "meta": {
+    "language": "en",
+    "simulated": true
+  }
+}
