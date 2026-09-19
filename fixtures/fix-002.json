@@ -1,0 +1,10 @@
+{
+  "id": "fix-002",
+  "source": "fixture://forum-sim",
+  "captured_at": "2026-09-18T10:12:00Z",
+  "title": "Credential dump chatter — combo list (SIMULATED)",
+  "body": "User dump_broker@example.invalid claims a 'fresh dump' of email:password pairs from a shopping site. Sample handle @sim_dumpdesk. No real credentials in this fixture.",
+  "category_hint": "credentials",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

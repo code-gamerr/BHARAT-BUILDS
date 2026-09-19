@@ -1,0 +1,10 @@
+{
+  "id": "fix-006",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T12:48:00Z",
+  "title": "Fake Aadhaar lamination stall (SIMULATED)",
+  "body": "Print + lamination of Aadhaar-style cards mentioned by docs@example.invalid and +91-92222-00006. Category docs. Entirely fictional.",
+  "category_hint": "docs",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

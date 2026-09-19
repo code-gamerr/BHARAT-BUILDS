@@ -1,0 +1,17 @@
+.aws-sam/
+.env
+.env.local
+.local/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+node_modules/
+web/dist/
+web/.env
+*.log
+.DS_Store
+Thumbs.db

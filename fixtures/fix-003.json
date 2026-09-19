@@ -1,0 +1,10 @@
+{
+  "id": "fix-003",
+  "source": "fixture://telegram-sim",
+  "captured_at": "2026-09-18T11:05:00Z",
+  "title": "UPI collect-request mule pitch (SIMULATED)",
+  "body": "Pay via UPI to a mule desk. Call +91-90000-00033 and visit https://sim.casepacket.invalid/upi-collect. Handle @sim_upi_desk. Simulated IMPS/UPI fraud chatter only.",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

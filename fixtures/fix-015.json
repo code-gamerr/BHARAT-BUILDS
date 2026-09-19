@@ -1,0 +1,10 @@
+{
+  "id": "fix-015",
+  "source": "fixture://telegram-sim",
+  "captured_at": "2026-09-18T16:40:00Z",
+  "title": "Investment channel reuses mule wallet (SIMULATED)",
+  "body": "Ponzi-style 'guaranteed returns' channel asks deposits to 1FakeWalletDemo000000000000000001 (same as fix-005). Handle @sim_yield_desk.",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "fix-014",
+  "source": "fixture://classifieds-sim",
+  "captured_at": "2026-09-18T16:18:00Z",
+  "title": "Rental listing advance fraud (SIMULATED)",
+  "body": "2BHK in Noida — pay token via UPI then ghost. Owner: +91-98888-00014 / rentals@example.invalid. Classic advance-fee fraud pattern, fake.",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --color-ink: #05070a;
+  --color-panel: #0b111a;
+  --color-panel-2: #101822;
+  --color-line: #1a2738;
+  --color-cyan: #00e5ff;
+  --color-blue: #3b82f6;
+  --color-gold: #ffb84d;
+  --color-red: #ff4d4d;
+  --color-amber: #ffb84d;
+  --color-green: #22c55e;
+  --color-muted: #7d8da6;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    color: #e8eef8;
+    font-family: var(--font-sans);
+    background:
+      radial-gradient(1000px 480px at 90% -8%, rgba(0, 229, 255, 0.07), transparent 55%),
+      radial-gradient(700px 400px at 5% 10%, rgba(59, 130, 246, 0.05), transparent 50%),
+      #05070a;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #243044;
+    border-radius: 999px;
+  }
+}
+
+@layer utilities {
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(0, 229, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 229, 255, 0.035) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .hex-bg {
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(0, 229, 255, 0.04), transparent 40%),
+      linear-gradient(rgba(26, 39, 56, 0.35) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26, 39, 56, 0.35) 1px, transparent 1px);
+    background-size: auto, 24px 24px, 24px 24px;
+  }
+
+  .glass {
+    background: rgba(11, 17, 26, 0.9);
+    border: 1px solid rgba(26, 39, 56, 0.95);
+    backdrop-filter: blur(14px);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 28px rgba(0, 229, 255, 0.18);
+  }
+
+  .nav-active {
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    color: #67f0ff;
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.12);
+  }
+}

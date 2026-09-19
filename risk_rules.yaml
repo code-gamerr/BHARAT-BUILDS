@@ -1,0 +1,25 @@
+# Documentation copy of src/shared/scoring.py — Lambdas use the Python dict
+# so they do not need PyYAML. Keep both in sync if you edit weights.
+
+category_base:
+  fraud: 40
+  credentials: 50
+  docs: 45
+  other: 25
+
+entity_weights:
+  phone: 6
+  email: 5
+  wallet: 10
+  url: 4
+  handle: 3
+
+keywords:
+  aadhaar: 12
+  kyc: 10
+  otp: 10
+  mule: 14
+  dump: 12
+  fullz: 14
+  otp bot: 16
+  sim swap: 14

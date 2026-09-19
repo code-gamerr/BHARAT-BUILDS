@@ -1,0 +1,10 @@
+{
+  "id": "fix-008",
+  "source": "fixture://jobs-sim",
+  "captured_at": "2026-09-18T13:42:00Z",
+  "title": "WFH data-entry job harvesting IDs (SIMULATED)",
+  "body": "Internship-style WFH ad asks candidates to send PAN and cheque photos to jobs@example.invalid or +91-93333-00008. https://sim.casepacket.invalid/wfh-task",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

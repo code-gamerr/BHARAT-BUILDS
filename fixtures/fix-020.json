@@ -1,0 +1,10 @@
+{
+  "id": "fix-020",
+  "source": "fixture://campus-sim",
+  "captured_at": "2026-09-18T18:35:00Z",
+  "title": "Campus internship credential harvest (SIMULATED)",
+  "body": "Student 'internship' form harvests college emails and passwords. internships@example.invalid +91-90444-00020 https://sim.casepacket.invalid/intern-form @sim_campus_hr",
+  "category_hint": "credentials",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}
