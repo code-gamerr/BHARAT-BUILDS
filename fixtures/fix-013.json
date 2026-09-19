@@ -1,0 +1,10 @@
+{
+  "id": "fix-013",
+  "source": "fixture://telegram-sim",
+  "captured_at": "2026-09-18T15:55:00Z",
+  "title": "Telegram 'leads' seller (SIMULATED)",
+  "body": "Selling 'loan leads' and phone books. Handle @sim_leadshop and +91-97777-00013. https://sim.casepacket.invalid/leads",
+  "category_hint": "other",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

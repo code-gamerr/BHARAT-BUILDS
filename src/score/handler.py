@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """Step Functions: risk score + clustering; optional ML blend (docs/ml.md)."""
 from __future__ import annotations
 
@@ -63,4 +64,20 @@ def handler(event, context):
     event["cluster_id"] = cluster_id
     event["group_size"] = GRPO_GROUP_SIZE
     event["enrichment"] = enrichment
+=======
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+SRC = Path(__file__).resolve().parents[1]
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from shared.pipeline import score_cluster  # noqa: E402
+
+
+def lambda_handler(event, context):
+    score_cluster(event["case_id"])
+>>>>>>> Tanish-local
     return event

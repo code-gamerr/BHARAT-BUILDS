@@ -1,0 +1,10 @@
+{
+  "id": "fix-005",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T12:15:00Z",
+  "title": "Crypto mule wallet for 'cashout' (SIMULATED)",
+  "body": "Send to wallet 1FakeWalletDemo000000000000000001 then message @sim_mule_cash. Also 0xF00d000000000000000000000000000000000001. Fixture wallet strings only.",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

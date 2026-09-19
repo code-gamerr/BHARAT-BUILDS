@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: CasePacket — LE dark-web intel triage (fixtures) for First Commit Ship It
@@ -18,20 +19,47 @@ Globals:
         GRPO_GROUP_SIZE: !Sub "${GrpoGroupSize}"
         BEDROCK_MODEL_ID: !Ref BedrockModelId
         GRPO_TRAIN_PROMPTS: "20"
+=======
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: CasePacket — dark-web signal to LE-ready case packet (simulated fixtures only)
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Timeout: 30
+    MemorySize: 256
+    Architectures: [x86_64]
+    Environment:
+      Variables:
+        TABLE_NAME: !Ref CaseTable
+        BUCKET_NAME: !Ref DataBucket
+        DEMO_API_KEY: !Ref DemoApiKey
+        ENABLE_BEDROCK: !Ref EnableBedrock
+        CASEPACKET_LOCAL: "0"
+    Tracing: Active
+>>>>>>> Tanish-local
 
 Parameters:
   DemoApiKey:
     Type: String
+<<<<<<< HEAD
     Default: casepacket-demo-key
     NoEcho: true
   AmplifyOrigin:
     Type: String
     Default: '*'
     Description: CORS origin for Amplify SPA
+=======
+    NoEcho: true
+    Default: casepacket-demo-key
+    Description: Shared x-api-key for the weekend demo (rotate after the event)
+>>>>>>> Tanish-local
   EnableBedrock:
     Type: String
     Default: "0"
     AllowedValues: ["0", "1"]
+<<<<<<< HEAD
     Description: Set 1 to attempt Bedrock enrich (packet still ships if it fails)
   GrpoGroupSize:
     Type: Number
@@ -73,6 +101,14 @@ Resources:
   CasesTable:
     Type: AWS::DynamoDB::Table
     Properties:
+=======
+
+Resources:
+  CaseTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: CasePacket
+>>>>>>> Tanish-local
       BillingMode: PAY_PER_REQUEST
       AttributeDefinitions:
         - AttributeName: pk
@@ -85,12 +121,35 @@ Resources:
         - AttributeName: sk
           KeyType: RANGE
 
+<<<<<<< HEAD
+=======
+  DataBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      NotificationConfiguration:
+        EventBridgeConfiguration:
+          EventBridgeEnabled: true
+
+>>>>>>> Tanish-local
   HttpApi:
     Type: AWS::Serverless::HttpApi
     Properties:
       CorsConfiguration:
         AllowOrigins:
+<<<<<<< HEAD
           - !Ref AmplifyOrigin
+=======
+          - "*"
+>>>>>>> Tanish-local
         AllowHeaders:
           - content-type
           - x-api-key
@@ -99,6 +158,7 @@ Resources:
           - POST
           - OPTIONS
 
+<<<<<<< HEAD
   HealthFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -165,10 +225,41 @@ Resources:
             ApiId: !Ref HttpApi
             Path: /ingest
             Method: POST
+=======
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: api.handler.lambda_handler
+      Environment:
+        Variables:
+          STATE_MACHINE_ARN: !Ref CompileStateMachine
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref CaseTable
+        - S3CrudPolicy:
+            BucketName: !Ref DataBucket
+        - StepFunctionsExecutionPolicy:
+            StateMachineName: !GetAtt CompileStateMachine.Name
+      Events:
+        Proxy:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /{proxy+}
+            Method: ANY
+        Root:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /
+            Method: ANY
+>>>>>>> Tanish-local
 
   IngestFunction:
     Type: AWS::Serverless::Function
     Properties:
+<<<<<<< HEAD
       CodeUri: src/ingest/
       Handler: handler.handler
       Policies:
@@ -187,28 +278,72 @@ Resources:
                 Rules:
                   - Name: suffix
                     Value: .json
+=======
+      CodeUri: src/
+      Handler: ingest.handler.lambda_handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref CaseTable
+        - S3ReadPolicy:
+            BucketName: !Ref DataBucket
+        - S3WritePolicy:
+            BucketName: !Ref DataBucket
+      Events:
+        RawCreated:
+          Type: EventBridgeRule
+          Properties:
+            Pattern:
+              source:
+                - aws.s3
+              detail-type:
+                - Object Created
+              detail:
+                bucket:
+                  name:
+                    - !Ref DataBucket
+                object:
+                  key:
+                    - prefix: raw/
+>>>>>>> Tanish-local
 
   ExtractFunction:
     Type: AWS::Serverless::Function
     Properties:
+<<<<<<< HEAD
       CodeUri: src/extract/
       Handler: handler.handler
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref CasesTable
+=======
+      CodeUri: src/
+      Handler: extract.handler.lambda_handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref CaseTable
+>>>>>>> Tanish-local
 
   ScoreFunction:
     Type: AWS::Serverless::Function
     Properties:
+<<<<<<< HEAD
       CodeUri: src/score/
       Handler: handler.handler
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref CasesTable
+=======
+      CodeUri: src/
+      Handler: score.handler.lambda_handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref CaseTable
+>>>>>>> Tanish-local
 
   CompileFunction:
     Type: AWS::Serverless::Function
     Properties:
+<<<<<<< HEAD
       CodeUri: src/compile/
       Handler: handler.handler
       Policies:
@@ -225,10 +360,20 @@ Resources:
       Description: Bedrock RFT GRPO reward (group_size>12) — docs/ml.md
       Timeout: 10
       MemorySize: 128
+=======
+      CodeUri: src/
+      Handler: compile.handler.lambda_handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref CaseTable
+        - S3CrudPolicy:
+            BucketName: !Ref DataBucket
+>>>>>>> Tanish-local
 
   CompileStateMachine:
     Type: AWS::Serverless::StateMachine
     Properties:
+<<<<<<< HEAD
       Type: STANDARD
       Definition:
         Comment: CasePacketCompile — extract → score → render packet
@@ -250,6 +395,15 @@ Resources:
             Type: Task
             Resource: !GetAtt CompileFunction.Arn
             End: true
+=======
+      Name: CasePacketCompile
+      Type: STANDARD
+      DefinitionUri: statemachine/casepacket.asl.json
+      DefinitionSubstitutions:
+        ExtractFunctionArn: !GetAtt ExtractFunction.Arn
+        ScoreFunctionArn: !GetAtt ScoreFunction.Arn
+        CompileFunctionArn: !GetAtt CompileFunction.Arn
+>>>>>>> Tanish-local
       Policies:
         - LambdaInvokePolicy:
             FunctionName: !Ref ExtractFunction
@@ -260,6 +414,7 @@ Resources:
 
 Outputs:
   ApiUrl:
+<<<<<<< HEAD
     Description: HTTP API endpoint
     Value: !Sub "https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com"
   RawBucketName:
@@ -279,3 +434,16 @@ Outputs:
   DemoApiKeyHint:
     Description: Use header x-api-key (value set at deploy)
     Value: "set via DemoApiKey parameter"
+=======
+    Description: HTTP API base URL
+    Value: !Sub "https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com"
+  BucketName:
+    Description: Raw + packet bucket
+    Value: !Ref DataBucket
+  TableName:
+    Description: DynamoDB table
+    Value: !Ref CaseTable
+  StateMachineArn:
+    Description: CasePacketCompile ARN
+    Value: !Ref CompileStateMachine
+>>>>>>> Tanish-local

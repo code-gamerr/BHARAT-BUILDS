@@ -1,0 +1,10 @@
+{
+  "id": "fix-001",
+  "source": "fixture://marketplace-sim",
+  "captured_at": "2026-09-18T10:00:00Z",
+  "title": "Selling fake KYC packs (SIMULATED)",
+  "body": "Contact +91-90000-00001 or seller@example.invalid for 'fresh KYC packs'. Also ping @sim_kyc_desk. Listing is a fixture for CasePacket demo — not a real marketplace post.",
+  "category_hint": "docs",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "fix-019",
+  "source": "fixture://trade-sim",
+  "captured_at": "2026-09-18T18:10:00Z",
+  "title": "GST invoice mule / input credit (SIMULATED)",
+  "body": "Offer to park GST invoices through shell firms. gst.mule@example.invalid +91-90333-00019. Docs/fraud hybrid, scored as docs hint overridden by keywords.",
+  "category_hint": "docs",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

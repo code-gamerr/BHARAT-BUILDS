@@ -1,0 +1,10 @@
+{
+  "id": "fix-009",
+  "source": "fixture://telegram-sim",
+  "captured_at": "2026-09-18T14:05:00Z",
+  "title": "OTP interception chatter (SIMULATED)",
+  "body": "Talk of an 'OTP bot' sitting on +91-94444-00009. Handle @sim_otp_relay. No tooling, no scripts — chatter only for scoring demo.",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

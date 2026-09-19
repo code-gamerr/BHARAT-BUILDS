@@ -1,0 +1,32 @@
+{
+  "Comment": "CasePacket compile — extract, score/cluster, render JSON, persist to S3",
+  "StartAt": "ExtractEnrich",
+  "States": {
+    "ExtractEnrich": {
+      "Type": "Task",
+      "Resource": "${ExtractFunctionArn}",
+      "Retry": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "MaxAttempts": 2,
+          "BackoffRate": 2
+        }
+      ],
+      "Next": "ScoreCluster"
+    },
+    "ScoreCluster": {
+      "Type": "Task",
+      "Resource": "${ScoreFunctionArn}",
+      "Next": "CompilePacket"
+    },
+    "CompilePacket": {
+      "Type": "Task",
+      "Resource": "${CompileFunctionArn}",
+      "Parameters": {
+        "case_id.$": "$.case_id",
+        "execution_arn.$": "$$.Execution.Id"
+      },
+      "End": true
+    }
+  }
+}

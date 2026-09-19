@@ -1,0 +1,10 @@
+{
+  "id": "fix-018",
+  "source": "fixture://matrimony-sim",
+  "captured_at": "2026-09-18T17:50:00Z",
+  "title": "NRI matrimony advance scam (SIMULATED)",
+  "body": "Profile asks for 'document clearance' fee. Contact +91-90222-00018 / nri.match@example.invalid @sim_rishta",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}

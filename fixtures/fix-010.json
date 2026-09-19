@@ -1,0 +1,10 @@
+{
+  "id": "fix-010",
+  "source": "fixture://forum-sim",
+  "captured_at": "2026-09-18T14:30:00Z",
+  "title": "IRCTC refund callback scam (SIMULATED)",
+  "body": "Fake railway refund desk: call +91-95555-00010 then open https://sim.casepacket.invalid/irctc-refund. Email refunds@example.invalid.",
+  "category_hint": "fraud",
+  "tlp": "TLP:AMBER",
+  "meta": { "language": "en", "simulated": true }
+}
